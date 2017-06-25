@@ -2,9 +2,9 @@ import { applyMiddleware, createStore, compose, combineReducers } from 'redux'
 import { createLogger } from 'redux-logger'
 import thunk from 'redux-thunk'
 
-import pageReducers from './reducers/pageReducers'
-import page1Reducers from '../components/page1/reducers'
-import page2Reducers from '../components/page2/reducers'
+import pageReducer from './reducers/pageReducer'
+import page1Reducer from '../components/page1/reducer'
+import page2Reducer from '../components/page2/reducer'
 
 
 const logger = createLogger({
@@ -16,9 +16,9 @@ const middleware = compose(
     window.devToolsExtension ? window.devToolsExtension() : f => f
 )
 const allReducers = combineReducers({
-    pageReducers,
-    page1Reducers,
-    page2Reducers
+    pageReducer,
+    page1Reducer,
+    page2Reducer
 })
 
 export default createStore(allReducers, middleware);

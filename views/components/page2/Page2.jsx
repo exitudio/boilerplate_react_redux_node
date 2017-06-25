@@ -37,6 +37,6 @@ class Page2 extends React.Component{
 
 const mapStateToProps=(state)=>{
     // console.log('mapStateToProps',state)
-    return {item:state.page2Reducers.currentItem}
+    return {item:state.page2Reducer.currentItem}
 }
 export default connect(mapStateToProps)(Page2)

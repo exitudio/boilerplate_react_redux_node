@@ -36,7 +36,4 @@ jspm_packages
 .DS_Store
 
 #generated folder
-production
-dev/public/images
-
-dev/public/index_bundle.js
+public

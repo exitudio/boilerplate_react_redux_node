@@ -13,7 +13,6 @@ class Page1 extends React.Component{
         console.log(this.a)
     }
     render(){
-        console.log('item',this.props.items)
         let items
         if(this.props.items){
             items = this.props.items.map((item,i)=>{
@@ -35,8 +34,8 @@ class Page1 extends React.Component{
 
 const mapStateToProps=(state)=>{
     // console.log('mapStateToProps',state)
-    if(state.page1Reducers.itemsInStore){
-        return {items:state.page1Reducers.itemsInStore.items}
+    if(state.page1Reducer.itemsInStore){
+        return {items:state.page1Reducer.itemsInStore.items}
     }
     return {items:[]}
 }
