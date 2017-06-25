@@ -4,7 +4,7 @@
   "description": "boilerplate react, redux, node server",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "watch:test": "npm test -- --watch",
     "dev": "npm-run-all --parallel watch:server watch:client",
     "watch:client": "webpack --watch",
@@ -31,6 +31,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "chai": "^4.0.2",
     "css-loader": "^0.28.4",
+    "enzyme": "^2.9.1",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.28.0",
     "jest": "^20.0.4",
@@ -42,6 +43,7 @@
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
     "react-router": "^3.0.5",
+    "react-test-renderer": "^15.6.1",
     "redux": "^3.7.0",
     "redux-logger": "^3.0.6",
     "redux-mock-store": "^1.2.3",
@@ -52,5 +54,10 @@
     "webpack": "2.2.1",
     "webpack-livereload-plugin": "^0.11.0",
     "webpack-uglify-js-plugin": "^1.1.9"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^.*\\.scss$": "/Users/exit/EXITFolder/work/nodejs/sandbox/sandbox_09_boilerplat_react_node/dev/test/scssjest.js"
+    }
   }
 }

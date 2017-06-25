@@ -2,10 +2,13 @@
 // a mock store using redux-mock-store
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
-import * as actions from '../views/components/page1/actions'
+import * as actions from './actions'
 import nock from 'nock'
-import host from './libs/hostAxiosNock'
+import host from '../../../test/libs/hostAxiosNock'
 import { expect } from 'chai' // You can use any testing library
+
+
+
 
 const middlewares = [thunk]
 const mockStore = configureMockStore(middlewares)
@@ -34,7 +37,7 @@ describe('Page1 async actions', () => {
 
         const expectedActions = [
             { type: actions.GET_ITEM_REQUEST },
-            { type: actions.GET_ITEM_SUCCESS, payload:response }
+            { type: actions.GET_ITEM_SUCCESS, payload: response }
         ]
         const store = mockStore({})
 

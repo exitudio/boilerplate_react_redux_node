@@ -3,6 +3,7 @@ import ReactDom from 'react-dom'
 import store from '../../redux/store'
 import {connect} from 'react-redux'
 import * as Actions from './actions'
+import ItemText from './components/ItemText.jsx'
 
 class Page1 extends React.Component{
     constructor(props){
@@ -17,15 +18,16 @@ class Page1 extends React.Component{
         if(this.props.items){
             items = this.props.items.map((item,i)=>{
                 return (<div key={i}>
-                            <div>{item.name}</div>
-                            <div>{item.status}</div>
+                            <ItemText {...item}></ItemText>
                         </div>)
             })
         }
         return (<div>
             page1
-            <div ref={child=>{this.a = child}}>
-                {items}
+            <div className="container">
+                <div ref={child=>{this.a = child}}>
+                    {items}
+                </div>
             </div>
         </div>)
     }

@@ -23,8 +23,6 @@ class Page2 extends React.Component{
     }
     
     render(){
-        console.log(this.props)
-        console.log('...')
         return (
             <div>
                 <div onClick={this.changeItem} value={Actions.ITEM_1} className={this.getClassName(Actions.ITEM_1)}>item1</div>

@@ -1,5 +1,5 @@
-import * as actions from '../views/components/page2/actions'
-import reducer from '../views/components/page2/reducer'
+import * as actions from './actions'
+import reducer from './reducer'
 
 describe('Page2', () => {
   const expectedAction = {
